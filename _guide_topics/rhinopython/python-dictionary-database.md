@@ -104,3 +104,10 @@ for item in datastore['office']['medical']: # This loop shows the change is not 
     if item.get('use') == "examination" :
         print 'The {} rooms now cost {}'.format(item.get("use"), item.get("price"))
 ```
+for keys,values in datastore.items():
+	for key,value in values.items():
+		for ke in value:
+			if key == "parking" : print(keys,key,ke,value[ke])
+			if key == "medical" :
+				for i,x in ke.items():
+				 print(keys,key,i,x)
